@@ -9,10 +9,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Ankit Govil. Built with Next.js.
           </div>
           <div className="flex gap-6 text-sm text-muted">
-            <Link href="/learn" className="hover:text-foreground transition-colors">Learn</Link>
-            <Link href="/toolkit" className="hover:text-foreground transition-colors">AI Toolkit</Link>
             <Link href="/projects" className="hover:text-foreground transition-colors">Projects</Link>
-            <Link href="/thoughts" className="hover:text-foreground transition-colors">Thoughts</Link>
+            <Link href="/thoughts" className="hover:text-foreground transition-colors">Ideas</Link>
+            <Link href="/resume" className="hover:text-foreground transition-colors">Resume</Link>
           </div>
         </div>
       </div>

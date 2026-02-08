@@ -11,64 +11,54 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-sm font-medium text-primary mb-4 tracking-wide uppercase">Hey, I&apos;m</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            <span className="gradient-text">Ankit Govil</span>
+            Hey, I&apos;m <span className="gradient-text">Ankit Govil</span>
           </h1>
           <p className="text-xl sm:text-2xl font-medium text-foreground mb-6">
-            I build AI and agent platforms from zero to scale.
+            I build AI platforms and developer ecosystems.
           </p>
           <p className="text-lg text-muted max-w-2xl mb-3">
-            Currently leading <span className="text-foreground">Chat AI &amp; Agent Platform at Zoom</span> &mdash;
-            rethinking how agents are built, distributed, and governed across the ecosystem.
+            Right now I&apos;m at <span className="text-foreground">Zoom</span>, leading Chat AI &amp; Agent Platform &mdash; figuring out how
+            agents should work across a product used by hundreds of millions of people.
           </p>
           <p className="text-lg text-muted max-w-2xl mb-3">
-            I build AI platforms that win developer ecosystems through fast time-to-first-agent,
-            enterprise-grade governance, and keynote-worthy narratives.
+            Before that I created the <span className="text-foreground">Teams AI SDK at Microsoft</span> &mdash; took it from nothing
+            to 10K+ developers and a Satya Nadella keynote. I&apos;ve also built a mobile
+            app store for 270M users, worked at startups, and started my own company.
           </p>
           <p className="text-lg text-muted max-w-2xl mb-10">
-            Previously created the <span className="text-foreground">Teams AI SDK at Microsoft</span> (0 &rarr; 10K+ developers, Satya Nadella keynote).
-            15 years across Zoom, Microsoft, startups, and founding my own company.
+            I like hard problems, opinionated tools, and shipping things that work.
           </p>
-
-          {/* Key stats */}
-          <div className="flex flex-wrap gap-8 mb-10">
-            <div>
-              <div className="text-2xl font-bold gradient-text">10K+</div>
-              <div className="text-xs text-muted mt-0.5">Developers Onboarded</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold gradient-text">150+</div>
-              <div className="text-xs text-muted mt-0.5">Production Partners</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold gradient-text">5M+</div>
-              <div className="text-xs text-muted mt-0.5">Incremental MAU</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold gradient-text">15yr</div>
-              <div className="text-xs text-muted mt-0.5">Product & Engineering</div>
-            </div>
+          <div className="mb-10">
+            <a
+              href="https://github.com/microsoft/teams-sdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
+            >
+              <span>&#8599;</span>
+              Proof: Teams SDK on GitHub
+            </a>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/resume"
+              href="/projects"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-primary-hover text-white font-medium transition-all hover:shadow-lg hover:shadow-primary/25 hover:scale-105"
             >
-              View Resume
+              Projects
             </Link>
             <Link
-              href="/learn"
+              href="/thoughts"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-card-border text-foreground font-medium transition-all hover:bg-card-bg hover:scale-105"
             >
-              AI Agent Learnings
+              Ideas
             </Link>
             <Link
-              href="/toolkit"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent text-accent font-medium transition-all hover:bg-accent/10 hover:scale-105"
+              href="/resume"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-card-border text-foreground font-medium transition-all hover:bg-card-bg hover:scale-105"
             >
-              AI Toolkit
+              Resume
             </Link>
           </div>
         </div>

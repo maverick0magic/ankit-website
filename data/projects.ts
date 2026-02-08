@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   tags: string[];
   status: "live" | "in-progress" | "concept";
+  kind?: "work" | "personal";
 }
 
 export const projects: Project[] = [
@@ -13,6 +14,7 @@ export const projects: Project[] = [
     description: "Created the foundational SDK for building Copilot agents on Microsoft 365 — JS, C#, and Python libraries with first-class AI primitives, CLI scaffolding, and Azure OpenAI integration. 0 → 10K+ developers in under 12 months.",
     tags: ["Platform", "SDK", "AI Agents", "Microsoft", "Developer Ecosystem"],
     status: "live",
+    kind: "work",
   },
   {
     slug: "zoom-chatbot-assistant",

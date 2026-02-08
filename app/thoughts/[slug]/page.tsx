@@ -21,7 +21,7 @@ export default async function ThoughtPostPage({ params }: { params: Promise<{ sl
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
       <Link href="/thoughts" className="text-sm text-primary hover:text-primary-hover transition-colors mb-8 inline-block">
-        &larr; Back to Thoughts
+        &larr; Back to Ideas
       </Link>
 
       <div className="mb-8">

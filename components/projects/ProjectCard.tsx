@@ -15,6 +15,11 @@ export default function ProjectCard({ project }: { project: Project }) {
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${statusColors[project.status]}`}>
             {project.status === "in-progress" ? "In Progress" : project.status.charAt(0).toUpperCase() + project.status.slice(1)}
           </span>
+          {project.kind === "work" && (
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border border-accent/30 text-accent bg-accent/10">
+              Work Highlight
+            </span>
+          )}
         </div>
         <h3 className="text-lg font-semibold text-foreground mb-2">{project.title}</h3>
         <p className="text-sm text-muted flex-1">{project.description}</p>

@@ -5,43 +5,43 @@ summary: "Why developer experience beats feature completeness, and the playbook 
 tags: ["Developer Experience", "Platform", "Strategy"]
 ---
 
-## The Myth of Feature Completeness
+## Most Platform Launches Flop — Here's Why
 
-Most platform teams believe they need to ship a comprehensive feature set before developers will adopt. They spend months building flexible abstractions, configurable pipelines, and extensive documentation — then launch to crickets.
+Most platform teams think they need a comprehensive feature set before developers will show up. They spend months building flexible abstractions, configurable pipelines, and extensive docs — then launch to crickets.
 
-The truth is simpler and more uncomfortable: developers evaluate your platform in the first 60 minutes. If they can't build something real in that window, they're gone. No amount of documentation or feature breadth will bring them back.
+Here's the uncomfortable truth I've learned the hard way: developers evaluate your platform in the first 60 minutes. If they can't build something real in that window, they're gone. No docs or feature breadth will bring them back.
 
-I've now built developer platforms at two companies — the Teams AI SDK at Microsoft (0 → 10K+ developers) and Zoom's Chat AI agent platform. The pattern is the same both times.
+I've now built developer platforms at two companies — the Teams AI SDK at Microsoft (0 → 10K+ developers) and Zoom's Chat AI agent platform. Same pattern both times.
 
-## Time-to-First-Value Is the Only Metric That Matters
+## Time-to-First-Value Is Everything
 
-When we launched the Teams AI SDK, we obsessed over one number: how long does it take a developer to go from `npm install` to a working agent? The answer needed to be under 30 minutes.
+When we launched the Teams AI SDK, we obsessed over one number: how long from `npm install` to a working agent? We needed it under 30 minutes.
 
-Everything else — extensibility, advanced features, enterprise controls — came second. Not because those things don't matter, but because they're irrelevant if nobody gets past the first hour.
+Everything else — extensibility, advanced features, enterprise controls — came second. Not because those things don't matter, but because they're irrelevant if nobody gets past hour one.
 
-We built CLI scaffolding that generated a fully working agent project in one command. Pre-configured auth. Pre-wired Azure OpenAI connection. A sample that actually did something useful out of the box. That single investment drove more adoption than every other feature combined.
+So we built CLI scaffolding that generated a fully working agent in one command. Pre-configured auth. Pre-wired Azure OpenAI. A sample that actually did something useful out of the box. That single investment drove more adoption than every other feature combined.
 
-## Opinionated Defaults Beat Flexible Frameworks
+## Be Opinionated (Seriously)
 
-Platform teams love flexibility. "Let developers choose their own architecture." "Don't be prescriptive." This sounds reasonable and is almost always wrong.
+Platform teams love flexibility. "Let developers choose their own architecture." Sounds reasonable. Almost always wrong.
 
-Developers don't want to make 15 architectural decisions before writing their first line of business logic. They want strong defaults that work, with escape hatches for when they need them.
+Nobody wants to make 15 architectural decisions before writing their first line of business logic. They want strong defaults that work, with escape hatches when they need them.
 
-The Teams AI SDK baked in opinions about memory management, prompt structure, tool registration, and safety guardrails. Developers who wanted to customize could override any of it. But the 90% who just wanted to build an agent never had to think about it.
+We baked in opinions about memory management, prompt structure, tool registration, and safety guardrails. Developers who wanted to customize could override any of it. But the 90% who just wanted to build an agent never had to think about it.
 
-The competing approach — expose low-level primitives and let developers compose — lost. Not because it was technically worse, but because it required too much upfront investment from developers who hadn't yet decided to commit to the platform.
+The competing approach — expose low-level primitives and let developers compose — lost. Not because it was technically worse, but because it demanded too much upfront investment from developers who hadn't yet decided to commit.
 
-## Trust Through Templates, Not Docs
+## Templates > Docs
 
-Documentation is necessary but insufficient. The highest-performing onboarding asset we shipped wasn't a getting-started guide — it was a set of templates that developers could clone, modify, and deploy.
+Documentation is necessary but not sufficient. Our highest-performing onboarding asset wasn't a getting-started guide — it was templates developers could clone, modify, and deploy.
 
-Templates work because developers learn by reading and modifying working code. They don't learn by reading prose about how code should work. A template says "here's a real thing that works, change it to do what you need." Documentation says "here's how to build something from scratch, good luck."
+Templates work because developers learn by reading and modifying working code, not by reading prose about how code should work. A template says "here's a real thing, change it." Docs say "here's how to build from scratch, good luck."
 
-We shipped 20+ templates covering common patterns: FAQ bots, meeting assistants, workflow automators, data lookup agents. Each one was a complete, deployable project. Developers could go from template to production in an afternoon.
+We shipped 20+ templates — FAQ bots, meeting assistants, workflow automators, data lookup agents. Each one deployable. Developers went from template to production in an afternoon.
 
-## The Ecosystem Flywheel
+## The Flywheel
 
-Once you have developers building on your platform, the flywheel kicks in:
+Once developers are building, the flywheel kicks in:
 
 1. **More developers** → more agents in the marketplace
 2. **More agents** → more value for end users
@@ -49,16 +49,16 @@ Once you have developers building on your platform, the flywheel kicks in:
 4. **More investment** → better developer experience
 5. Repeat
 
-The hardest part is getting the flywheel started. That's why time-to-first-value matters so much — it's the spark that starts the loop.
+The hardest part is getting it started. That's why time-to-first-value matters so much — it's the spark.
 
-## The Playbook
+## The Short Version
 
 If you're building a developer platform from zero:
 
 1. **Measure time-to-first-value** and make it your north star
 2. **Ship opinionated defaults** with escape hatches, not flexible primitives
-3. **Build templates**, not just documentation
+3. **Build templates**, not just docs
 4. **Make the first experience magical** — invest disproportionately in onboarding
-5. **Earn the keynote** — wrap your platform in a narrative that leadership can champion
+5. **Earn the keynote** — wrap your platform in a narrative leadership can champion
 
-The developers will come for the DX. They'll stay for the ecosystem. But they have to get through that first hour.
+Developers come for the DX. They stay for the ecosystem. But they have to get through that first hour.

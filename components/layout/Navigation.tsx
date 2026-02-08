@@ -6,10 +6,8 @@ import { useState } from "react";
 import { useTheme } from "./ThemeProvider";
 
 const navLinks = [
-  { href: "/learn", label: "Learn" },
-  { href: "/toolkit", label: "AI Toolkit" },
   { href: "/projects", label: "Projects" },
-  { href: "/thoughts", label: "Thoughts" },
+  { href: "/thoughts", label: "Ideas" },
   { href: "/resume", label: "Resume" },
 ];
 
