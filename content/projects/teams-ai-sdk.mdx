@@ -1,0 +1,52 @@
+---
+title: "Teams AI SDK"
+date: "2024-12-01"
+summary: "How I built the foundational platform for Copilot agents on Microsoft 365 — from zero to 10K+ developers in under 12 months."
+tags: ["Platform", "SDK", "AI Agents", "Microsoft"]
+---
+
+## Problem
+
+Microsoft needed a platform for third-party AI agents on Teams and M365. The existing Bot Framework was built in the pre-LLM era — it handled messaging and cards well, but had no primitives for AI-native workflows like RAG, tool use, memory, or multi-turn reasoning. Developers who wanted to build Copilot agents were left stitching together Azure OpenAI, Bot Framework, and Graph APIs manually, resulting in weeks of setup time and wildly inconsistent quality.
+
+The gap was clear: without a first-class SDK, Microsoft would lose the developer ecosystem race for enterprise AI agents to competitors shipping faster and simpler tooling.
+
+## Strategic Decision
+
+The core bet was between two approaches:
+
+**Option A — Flexible framework.** Expose low-level building blocks and let developers compose their own architecture. More flexibility, slower adoption, higher variance in quality.
+
+**Option B — Opinionated, batteries-included SDK.** Bake AI primitives (RAG, memory, guardrails, tool use) directly into the SDK with strong defaults. Less flexibility, but dramatically faster time-to-first-agent and more consistent production quality.
+
+I chose Option B. The insight was that developer ecosystems are won on time-to-first-value, not feature completeness. If a developer can ship a working agent in 30 minutes instead of 3 days, they choose your platform — and they stay.
+
+## Execution
+
+**SDK Design:** Built the entire system end-to-end — shipped the Teams AI SDK v1 across TypeScript, C#, and Python, then led the fundamental reimagining into v2 (now the [Teams SDK](https://github.com/microsoft/teams-sdk)), broadening scope beyond AI into the full Teams app platform. Each SDK included first-class support for Azure OpenAI, conversation memory, RAG pipelines, content moderation, and multi-turn planning.
+
+**Accelerator Templates:** Stood up the Agent Accelerator Templates system — pre-built, deployable project templates that let developers go from zero to a working agent in minutes. These weren't sample code; they were production-ready starting points covering common patterns (FAQ bots, meeting assistants, workflow automators, data lookup agents). This was the single biggest driver of adoption.
+
+**CLI Scaffolding:** Built `@microsoft/teams.cli` tooling that scaffolded a working agent project in one command — pre-configured with Entra auth, deployment templates, and AI capabilities wired up.
+
+**AI Primitives:** Integrated Azure OpenAI directly into the SDK rather than requiring developers to manage their own LLM connections. Added guardrails (input validation, output filtering, PII handling) as built-in middleware, not afterthoughts.
+
+**Developer GTM:** Partnered with DevRel to ship the templates, tutorials, and documentation (now at microsoft.github.io/teams-sdk). Secured keynote demos at Build and Ignite. Ran partner onboarding sprints with ISVs like ServiceNow, Workday, and SAP.
+
+## Impact
+
+- **0 → 10K+ developers** adopted the SDK within 12 months
+- **150+ partners** built production agents on the platform
+- **Satya Nadella keynote** at Build featured the SDK and partner ecosystem
+- Teams became the **primary Copilot distribution surface** across M365
+- The SDK became the **default path** for enterprise agentic AI on Microsoft's platform
+
+## Lessons
+
+**Time-to-first-value wins ecosystems.** Reducing setup from days to 30 minutes was worth more than any feature. Developers evaluate platforms in their first hour — if they can't ship something real, they leave.
+
+**Opinionated beats flexible.** Strong defaults with escape hatches outperform blank-canvas frameworks. Most developers want to build their product, not their infrastructure.
+
+**Narrative secures investment.** Reframing the SDK from "a developer tool" to "the platform for enterprise AI agents" is what unlocked the Nadella keynote slot and multi-BU investment. Technical products need strategic narratives.
+
+**Templates > documentation.** Developers learn by modifying working code, not reading docs. Our best-performing onboarding asset was a single-command scaffold, not a 50-page guide.

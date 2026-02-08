@@ -18,14 +18,17 @@ export default function Hero() {
           <p className="text-xl sm:text-2xl font-medium text-foreground mb-6">
             I build AI and agent platforms from zero to scale.
           </p>
-          <p className="text-lg text-muted max-w-2xl mb-4">
-            At <span className="text-foreground">Zoom</span>, I drive the Chat AI & Agent Platform &mdash;
-            rethinking how 1P, 2P, and 3P agents are built, distributed, and experienced across the ecosystem.
+          <p className="text-lg text-muted max-w-2xl mb-3">
+            Currently leading <span className="text-foreground">Chat AI &amp; Agent Platform at Zoom</span> &mdash;
+            rethinking how agents are built, distributed, and governed across the ecosystem.
+          </p>
+          <p className="text-lg text-muted max-w-2xl mb-3">
+            I build AI platforms that win developer ecosystems through fast time-to-first-agent,
+            enterprise-grade governance, and keynote-worthy narratives.
           </p>
           <p className="text-lg text-muted max-w-2xl mb-10">
-            Previously at <span className="text-foreground">Microsoft</span>, I created and shipped the
-            Teams AI SDK, onboarded 10K+ developers, and delivered products featured
-            in Satya Nadella&apos;s keynotes. 15 years across Zoom, Microsoft, startups, and founding my own company.
+            Previously created the <span className="text-foreground">Teams AI SDK at Microsoft</span> (0 &rarr; 10K+ developers, Satya Nadella keynote).
+            15 years across Zoom, Microsoft, startups, and founding my own company.
           </p>
 
           {/* Key stats */}

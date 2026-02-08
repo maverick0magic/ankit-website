@@ -1,3 +1,43 @@
+export interface FlagshipWin {
+  metric: string;
+  label: string;
+  description: string;
+}
+
+export const flagshipWins: FlagshipWin[] = [
+  {
+    metric: "0 → 10K+",
+    label: "Developers",
+    description: "Created the Teams AI SDK, the foundational layer for every Copilot agent on M365.",
+  },
+  {
+    metric: "5M+",
+    label: "Incremental MAU",
+    description: "Designed mobile app store for Teams, creating a new platform distribution channel.",
+  },
+  {
+    metric: "Satya Nadella",
+    label: "Keynote",
+    description: "Defined the product vision featured at Build/Ignite mainstage, securing cross-org investment.",
+  },
+];
+
+export interface ProofPoint {
+  label: string;
+  url: string;
+}
+
+export const proofPoints: ProofPoint[] = [
+  {
+    label: "Teams SDK — GitHub",
+    url: "https://github.com/microsoft/teams-sdk",
+  },
+  {
+    label: "Teams AI Documentation",
+    url: "https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview",
+  },
+];
+
 export interface Experience {
   company: string;
   location: string;
@@ -18,7 +58,7 @@ export const experiences: Experience[] = [
         period: "July 2025 – Present",
         highlights: [
           "Driving the AI and agent platform strategy for Zoom Team Chat — rethinking how 1P, 2P, and 3P agents are built, distributed, and experienced across the Zoom ecosystem.",
-          "Redefining the developer platform for Zoom Chat agents, re-engaging the developer community with a modern agent-first extensibility model and streamlined integration patterns.",
+          "Chose to rebuild the developer platform around an agent-first extensibility model rather than patching the legacy bot framework — re-engaging the developer community with modern integration patterns.",
           "Leading the convergence of conversational AI and chat platform capabilities — designing the architecture for agentic UX, tool use, and multi-turn interactions natively within Zoom Team Chat.",
           "Driving cross-functional alignment across Zoom's AI, platform, and chat product teams to ship an integrated agent experience that spans 1P AI features, partner-built agents, and custom enterprise workflows.",
         ],
@@ -34,11 +74,11 @@ export const experiences: Experience[] = [
         period: "May 2022 – June 2025",
         highlights: [
           "Owned end-to-end product strategy for Teams AI extensibility — the platform layer that enables every Copilot, AI bot, and agentic experience across Microsoft 365 — influencing cross-BU roadmaps with Azure AI, Microsoft Graph, and the Copilot Studio org.",
-          "Created and shipped the Teams AI Library (v1 & v2), the foundational SDK for building Copilot agents in JS, C#, and Python — driving adoption from 0 to 10K+ developers and 150+ production partners in under 12 months.",
+          "Bet on an opinionated SDK with CLI scaffolding over a flexible-but-complex framework → reduced time-to-first-agent from days to 30 min → won 10K+ developers and 150+ production partners over competing ecosystems in under 12 months.",
           "Defined the GTM strategy for third-party AI agents on Teams, unlocking millions of net-new monthly active users and establishing Teams as the primary distribution surface for Copilot partner ecosystem.",
-          "Integrated Azure OpenAI capabilities — RAG, persistent memory, compliance controls, and multi-agent orchestration — into the Teams platform, directly shaping how Microsoft delivers agentic AI at enterprise scale.",
-          "Reduced developer time-to-first-agent from days to under 30 minutes by designing CLI scaffolding, opinionated templates, and streamlined auth flows — a key factor in winning platform adoption over competing ecosystems.",
-          "Defined the product vision featured in Satya Nadella's keynote and Microsoft Build / Ignite mainstage demos — translating technical platform capabilities into a narrative that secured executive sponsorship and cross-org investment.",
+          "Made the call to integrate Azure OpenAI primitives (RAG, memory, guardrails) directly into the SDK rather than leaving integration to developers → became the default path for enterprise agentic AI on M365.",
+          "Designed CLI scaffolding, opinionated templates, and streamlined auth flows that reduced developer time-to-first-agent from days to under 30 minutes — a key factor in winning platform adoption over competing ecosystems.",
+          "Pitched and secured the Satya Nadella keynote slot by reframing the SDK from a developer tool into a platform narrative → unlocked cross-org executive sponsorship and multi-BU investment.",
         ],
       },
       {
@@ -46,7 +86,7 @@ export const experiences: Experience[] = [
         period: "April 2019 – August 2022",
         highlights: [
           "Owned app acquisition and distribution strategy for Teams Mobile (iOS & Android), building the end-to-end experience for 3P, 1P, and LOB app discovery, installation, and engagement across 270M+ monthly active users.",
-          "Designed and shipped the mobile app store experience — in-app search, contextual recommendations, and mobile-first install flows for frontline and EDU personas — driving 5M+ incremental MAU and creating a new platform revenue channel.",
+          "Prioritized mobile-first app discovery for frontline/EDU personas over enterprise-only flows → drove 5M+ incremental MAU and created a new platform revenue channel.",
           "Led cross-platform app strategy spanning mobile, desktop, and web, aligning 20+ engineers and 3 design pods to deliver a unified extensibility experience.",
         ],
       },

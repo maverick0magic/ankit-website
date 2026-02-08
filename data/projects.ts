@@ -8,6 +8,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "teams-ai-sdk",
+    title: "Teams AI SDK",
+    description: "Created the foundational SDK for building Copilot agents on Microsoft 365 — JS, C#, and Python libraries with first-class AI primitives, CLI scaffolding, and Azure OpenAI integration. 0 → 10K+ developers in under 12 months.",
+    tags: ["Platform", "SDK", "AI Agents", "Microsoft", "Developer Ecosystem"],
+    status: "live",
+  },
+  {
     slug: "zoom-chatbot-assistant",
     title: "Zoom Chatbot Assistant",
     description: "AI-powered Team Chat bot built with Zoom's Rivet SDK and OpenAI — featuring streaming responses, interactive feedback, and slash commands. Built as part of driving Zoom's Chat AI platform.",

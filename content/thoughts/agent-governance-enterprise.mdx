@@ -1,0 +1,64 @@
+---
+title: "Agent Governance: The Missing Layer in Enterprise AI"
+date: "2025-02-08"
+summary: "Why enterprises need governance before scale, and how to build trust boundaries for 1P and 3P AI agents."
+tags: ["AI Agents", "Governance", "Enterprise"]
+---
+
+## The Governance Gap
+
+Every enterprise wants AI agents. Few are ready to deploy them safely. The gap isn't in AI capability — it's in governance. Companies are building agents that can read internal documents, call APIs, take actions on behalf of users, and interact with customers — without the infrastructure to audit, control, or constrain what those agents do.
+
+This is the governance gap, and it's the biggest blocker to enterprise AI adoption at scale. I've seen it from both sides — building the Teams AI SDK at Microsoft (where governance was a first-class requirement) and now at Zoom's Chat AI platform (where we're designing governance for a multi-agent ecosystem).
+
+## Why Governance Must Come Before Scale
+
+The instinct is to ship fast and add governance later. This is backwards for three reasons:
+
+**Trust is a prerequisite, not a feature.** Enterprise buyers — CISOs, compliance teams, legal — will block agent deployment if they can't answer basic questions: What data can this agent access? What actions can it take? Who approved it? Can we audit its decisions? If you can't answer these before deployment, you don't deploy.
+
+**Retrofitting governance is exponentially harder.** Agents built without governance guardrails develop patterns that are difficult to constrain later — hardcoded API access, ungoverned tool use, opaque decision chains. Building governance in from day one is 10x cheaper than retrofitting it.
+
+**Governance enables velocity.** This is counterintuitive but real. Teams with clear governance frameworks deploy agents faster because they don't get stuck in security review cycles. Pre-approved trust boundaries, standard audit patterns, and compliance templates turn a 6-week review into a 2-day checklist.
+
+## The Three Pillars
+
+### 1. Compliance and Auditability
+
+Every agent action should produce an auditable record: what was the input, what tools were called, what data was accessed, what output was generated, and what decision was made. This isn't just logging — it's structured, queryable audit trails that compliance teams can review.
+
+At Microsoft, we built compliance controls directly into the Teams AI SDK — content moderation middleware, PII detection, and conversation logging that met enterprise data residency requirements. Developers got these for free by using the SDK. They didn't have to build compliance infrastructure themselves.
+
+### 2. Human-in-the-Loop as a Product Feature
+
+The most powerful governance mechanism isn't a technology — it's a human who can say "wait." Human-in-the-loop (HITL) isn't a safety fallback; it's a product feature that enterprises demand.
+
+Effective HITL means designing agent UX where high-stakes actions require explicit human approval. Not a confirmation dialog that users click through reflexively, but genuine decision points where the agent presents its reasoning and the human makes the call.
+
+The design challenge is making HITL seamless enough that it doesn't destroy the value proposition of automation, while meaningful enough that it actually catches problems.
+
+### 3. 1P vs 3P Trust Boundaries
+
+Not all agents are created equal. First-party agents (built by the platform) operate with different trust levels than third-party agents (built by partners or customers). This distinction needs to be architecturally enforced, not just policy-enforced.
+
+At both Microsoft and Zoom, the platform question is the same: how do you let third-party agents access enough platform capability to be useful, while preventing them from accessing data or taking actions they shouldn't?
+
+The answer is layered trust boundaries:
+- **Capability scoping:** 3P agents declare what tools and data they need; the platform enforces those boundaries at runtime
+- **Data isolation:** 3P agents operate in sandboxed contexts and cannot access data outside their granted scope
+- **Action approval:** High-impact actions from 3P agents require additional user or admin consent
+- **Revocability:** Enterprise admins can disable any 3P agent instantly, with full audit trail
+
+## Building Governance Into Your Platform
+
+If you're building an enterprise AI agent platform, governance isn't optional — it's the product.
+
+**Make governance the default.** Audit logging, content moderation, and trust boundaries should be built into the SDK, not left to individual developers. If governance requires extra work, developers will skip it.
+
+**Design for the CISO, not just the developer.** Your developer experience gets you adoption. Your governance story gets you enterprise procurement. Both matter.
+
+**Treat trust boundaries as APIs.** Trust policies should be declarative, versionable, and testable — not embedded in application logic. This lets security teams review and update policies without redeploying agents.
+
+**Ship governance dashboards, not just controls.** Enterprise admins need visibility: which agents are deployed, what data they're accessing, what actions they're taking, and whether any policy violations have occurred. Controls without visibility are controls nobody trusts.
+
+The companies that get governance right will be the ones that scale enterprise AI. Everyone else will stay stuck in pilot programs.

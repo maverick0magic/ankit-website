@@ -1,4 +1,4 @@
-import { experiences, skillCategories, education, highlight } from "@/data/resume";
+import { experiences, skillCategories, education, highlight, flagshipWins, proofPoints } from "@/data/resume";
 
 export const metadata = { title: "Resume | Ankit Govil" };
 
@@ -23,6 +23,36 @@ export default function ResumePage() {
       <div className="mb-12 p-5 bg-card-bg border border-card-border rounded-xl">
         <p className="text-muted leading-relaxed">{highlight}</p>
       </div>
+
+      {/* Flagship Wins */}
+      <section className="mb-12">
+        <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-card-border">Flagship Wins</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {flagshipWins.map((win) => (
+            <div key={win.label} className="p-5 bg-card-bg border border-card-border rounded-xl">
+              <div className="text-2xl font-bold gradient-text mb-1">{win.metric}</div>
+              <div className="text-sm font-medium text-foreground mb-2">{win.label}</div>
+              <p className="text-xs text-muted leading-relaxed">{win.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Proof Points */}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {proofPoints.map((point) => (
+            <a
+              key={point.label}
+              href={point.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
+            >
+              <span>&#8599;</span>
+              {point.label}
+            </a>
+          ))}
+        </div>
+      </section>
 
       {/* Experience */}
       <section className="mb-12">
