@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* Dark mode (default) */
+:root, .dark {
+  --background: #0a0a0f;
+  --foreground: #e2e8f0;
+  --card-bg: #1a1a2e;
+  --card-border: #2a2a3e;
+  --primary: #6366f1;
+  --primary-hover: #818cf8;
+  --accent: #22d3ee;
+  --accent-hover: #67e8f9;
+  --muted: #94a3b8;
+  --rookie-green: #22c55e;
+  --rookie-green-border: rgba(34, 197, 94, 0.3);
+  --advanced-purple: #a855f7;
+  --advanced-purple-border: rgba(168, 85, 247, 0.3);
+}
+
+/* Light mode */
+.light {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --primary: #4f46e5;
+  --primary-hover: #6366f1;
+  --accent: #0891b2;
+  --accent-hover: #06b6d4;
+  --muted: #64748b;
+  --rookie-green: #16a34a;
+  --rookie-green-border: rgba(22, 163, 74, 0.3);
+  --advanced-purple: #9333ea;
+  --advanced-purple-border: rgba(147, 51, 234, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-rookie-green: var(--rookie-green);
+  --color-advanced-purple: var(--advanced-purple);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Card hover glow */
+.card-glow {
+  transition: all 0.3s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15), 0 0 40px rgba(99, 102, 241, 0.05);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.card-glow-green:hover {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), 0 0 40px rgba(34, 197, 94, 0.05);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.card-glow-purple:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15), 0 0 40px rgba(168, 85, 247, 0.05);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* MDX content styling */
+.mdx-content h1 { font-size: 2rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+.mdx-content h2 { font-size: 1.5rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--foreground); }
+.mdx-content h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--foreground); }
+.mdx-content p { margin-bottom: 1rem; line-height: 1.75; color: var(--muted); }
+.mdx-content ul, .mdx-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: var(--muted); }
+.mdx-content li { margin-bottom: 0.5rem; line-height: 1.75; }
+.mdx-content ul { list-style-type: disc; }
+.mdx-content ol { list-style-type: decimal; }
+.mdx-content code {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+.mdx-content pre {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.mdx-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.mdx-content blockquote {
+  border-left: 3px solid var(--primary);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.mdx-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.mdx-content a:hover {
+  color: var(--primary-hover);
+}
+.mdx-content strong { color: var(--foreground); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }

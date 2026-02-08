@@ -1,0 +1,91 @@
+---
+title: "Prompt Engineering 101"
+date: "2025-01-10"
+summary: "System prompts, few-shot, chain-of-thought, structured output"
+tags: ["Prompting", "Fundamentals"]
+---
+
+## Why Prompt Engineering Matters
+
+The prompt is your primary interface with an LLM. A well-crafted prompt can be the difference between a useless response and a production-quality output. As a PM building AI products, prompt engineering is one of the highest-leverage skills you can develop.
+
+## Core Techniques
+
+### 1. System Prompts
+
+System prompts set the context, personality, and constraints for the model. Think of it as the "job description" for your AI.
+
+```
+You are a senior product analyst. You analyze feature requests
+and provide structured recommendations. Always consider:
+- User impact (who benefits, how many)
+- Engineering effort (t-shirt sizing)
+- Strategic alignment (company goals)
+Respond in markdown with clear headers.
+```
+
+**Best practices:**
+- Be specific about the role and expertise level
+- Define output format upfront
+- Include constraints and guardrails
+- Keep it concise — long system prompts can dilute focus
+
+### 2. Few-Shot Examples
+
+Provide examples of the input-output pattern you want. This is one of the most reliable ways to steer model behavior.
+
+```
+Classify these feature requests:
+
+Input: "Add dark mode to the dashboard"
+Category: UI/UX
+Priority: Medium
+
+Input: "Fix login timeout on mobile"
+Category: Bug
+Priority: High
+
+Input: "Add bulk export for reports"
+Category: ???
+Priority: ???
+```
+
+### 3. Chain-of-Thought (CoT)
+
+Ask the model to think step by step. This dramatically improves reasoning quality for complex tasks.
+
+```
+Think through this step by step:
+1. First, identify the core problem
+2. Then, list possible solutions
+3. Evaluate each solution's tradeoffs
+4. Recommend the best approach with reasoning
+```
+
+### 4. Structured Output
+
+Tell the model exactly what format you want. JSON output is especially useful for building products.
+
+```
+Respond with a JSON object containing:
+{
+  "summary": "one-line summary",
+  "sentiment": "positive | negative | neutral",
+  "action_items": ["list", "of", "items"],
+  "confidence": 0.0 to 1.0
+}
+```
+
+## Common Pitfalls
+
+1. **Being too vague** — "Summarize this" vs "Provide a 3-bullet executive summary focusing on revenue impact"
+2. **Prompt stuffing** — cramming too many instructions degrades performance
+3. **Ignoring output format** — always specify how you want the response structured
+4. **Not testing edge cases** — your prompt should handle weird inputs gracefully
+
+## Key Takeaways
+
+- **Iterate relentlessly** — prompt engineering is empirical, not theoretical
+- **Version your prompts** — track changes like code
+- **Test with diverse inputs** — what works for one example may fail for others
+- **Combine techniques** — system prompt + few-shot + CoT is a powerful combination

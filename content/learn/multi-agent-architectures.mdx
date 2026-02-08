@@ -1,0 +1,75 @@
+---
+title: "Multi-Agent Architectures"
+date: "2025-01-20"
+summary: "Orchestrator patterns, agent handoffs, supervisor/worker models"
+tags: ["Architecture", "Agents"]
+---
+
+## Why Multi-Agent?
+
+Single agents hit limits when tasks are complex, require diverse expertise, or need parallel processing. Multi-agent systems break work into specialized roles, similar to how teams of humans collaborate.
+
+## Core Patterns
+
+### 1. Orchestrator-Worker
+
+A central **orchestrator** agent breaks down tasks and delegates to specialized **worker** agents.
+
+**When to use:**
+- Complex tasks with distinct sub-tasks
+- Need for specialized capabilities (code, search, analysis)
+- Want clear separation of concerns
+
+**Architecture:**
+```
+User → Orchestrator → [Planner, Researcher, Writer, Reviewer]
+```
+
+### 2. Supervisor-Team
+
+Similar to orchestrator, but the supervisor monitors worker quality and can reassign or retry tasks.
+
+**When to use:**
+- Quality-critical workflows
+- Tasks where workers may produce inconsistent results
+- Need for error recovery and retries
+
+### 3. Peer-to-Peer (Debate)
+
+Multiple agents discuss and critique each other's outputs. Great for reducing hallucinations and improving reasoning.
+
+**When to use:**
+- High-stakes decisions
+- Complex analysis where multiple perspectives help
+- Reducing individual agent bias
+
+### 4. Pipeline (Sequential)
+
+Agents pass output to the next agent in a chain, each adding value.
+
+**When to use:**
+- Well-defined sequential workflows
+- Each step has clear input/output contracts
+- ETL-style processing of content or data
+
+## Agent Handoff Strategies
+
+**Explicit routing:** Orchestrator decides which agent handles each sub-task based on classification.
+
+**Capability-based:** Agents declare their capabilities, and tasks are routed based on matching.
+
+**Conversation-based:** Agents can "tag in" other agents when they detect a topic outside their expertise.
+
+## Key Design Decisions
+
+1. **Shared vs isolated context** — Do agents share memory, or work independently?
+2. **Sync vs async** — Do agents wait for each other, or work in parallel?
+3. **Error propagation** — How do failures in one agent affect the pipeline?
+4. **Cost management** — More agents = more LLM calls = higher cost
+
+## Key Takeaways
+
+- **Start with a single agent** and add agents only when complexity demands it
+- **Define clear interfaces** between agents (input/output contracts)
+- **Monitor cost carefully** — multi-agent systems can be expensive
+- **Human-in-the-loop** at critical handoff points builds reliability

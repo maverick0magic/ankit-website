@@ -1,0 +1,66 @@
+---
+title: "What Are AI Agents?"
+date: "2025-01-15"
+summary: "Mental model for autonomous AI systems vs chatbots vs copilots"
+tags: ["Fundamentals", "Agents"]
+---
+
+## The Agent Spectrum
+
+Not all AI systems are created equal. Understanding where different AI products sit on the autonomy spectrum is critical for product decisions.
+
+### Chatbots: Reactive Responders
+Traditional chatbots (even LLM-powered ones) are **reactive**. They respond to a single prompt, generate output, and wait for the next input. Think ChatGPT in its simplest form — you ask, it answers.
+
+**Key characteristics:**
+- Single turn or multi-turn conversation
+- No ability to take actions in the real world
+- No persistent goals or task tracking
+- Output is always text (or structured text)
+
+### Copilots: Augmented Human Workflows
+Copilots sit alongside humans and **augment** their work. GitHub Copilot is the canonical example — it suggests code as you type, but you're still driving.
+
+**Key characteristics:**
+- Embedded in an existing workflow
+- Suggests actions but doesn't execute autonomously
+- Human makes final decisions
+- Reduces friction in existing processes
+
+### Agents: Autonomous Goal Pursuers
+AI Agents are systems that can **autonomously pursue goals** by planning, using tools, and iterating on their approach. They're the most capable — and most complex — AI pattern.
+
+**Key characteristics:**
+- Given a goal, not just a prompt
+- Can plan multi-step approaches
+- Use tools (APIs, databases, code execution)
+- Can observe results and adjust strategy
+- May involve human-in-the-loop for critical decisions
+
+## The Agent Loop
+
+Every agent follows a core loop:
+
+1. **Observe** — Receive input or observe environment state
+2. **Think** — Reason about what to do next (LLM inference)
+3. **Act** — Execute an action using a tool
+4. **Reflect** — Evaluate the result and decide next steps
+
+This loop continues until the goal is achieved or the agent determines it cannot proceed.
+
+## When to Build an Agent vs a Chatbot
+
+Ask yourself these questions:
+
+- **Does the task require multiple steps?** If yes, lean toward agents.
+- **Does it need real-world actions?** (API calls, file operations, data queries) — agents.
+- **Is the task well-defined with clear success criteria?** — agents work best here.
+- **Is the value in conversation itself?** — chatbot might be sufficient.
+- **Do you need predictable, low-latency responses?** — chatbots are simpler and faster.
+
+## Key Takeaways
+
+1. **Agents are a superset** — every agent can chat, but not every chatbot can agent.
+2. **Start simple** — build a chatbot first, then add agentic capabilities incrementally.
+3. **Tools are what make agents powerful** — the LLM is the brain, tools are the hands.
+4. **Human-in-the-loop is a feature, not a limitation** — it builds trust and catches errors.

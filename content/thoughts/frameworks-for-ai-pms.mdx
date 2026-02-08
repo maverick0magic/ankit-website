@@ -1,0 +1,41 @@
+---
+title: "Frameworks That Actually Work for AI PMs"
+date: "2025-01-20"
+summary: "Bridging traditional PM frameworks with the unique challenges of AI product development."
+tags: ["Frameworks", "Product", "AI"]
+---
+
+## The AI PM Challenge
+
+Traditional PM frameworks were built for deterministic software. AI products are probabilistic — they don't always give the same answer, they can hallucinate, and "quality" is fuzzy. Here's how to adapt proven frameworks for the AI era.
+
+## Prioritization: LNO for AI Features
+
+Shreyas Doshi's LNO framework (Leverage, Neutral, Overhead) maps perfectly to AI feature decisions:
+
+- **Leverage tasks:** Improving model quality, building evaluation frameworks, designing agent architectures — these compound in value.
+- **Neutral tasks:** Adding new prompt templates, basic UI tweaks — necessary but not transformative.
+- **Overhead tasks:** Manual data labeling, one-off model comparisons — minimize or automate these.
+
+**AI-specific insight:** In AI products, evaluation infrastructure is almost always a Leverage task. Teams that invest in evals early ship better products faster.
+
+## Strategy: DHM Model for AI Products
+
+Gibson Biddle's DHM (Delight, Hard-to-copy, Margin-enhancing) framework helps assess AI feature strategy:
+
+- **Delight:** Does the AI feature create genuine user delight? Not just "cool AI" but actually solving a pain point.
+- **Hard-to-copy:** Proprietary data, fine-tuned models, and unique agent architectures are moats. Raw LLM wrappers are not.
+- **Margin-enhancing:** AI can improve margins (automation) or destroy them (expensive inference). Model your unit economics.
+
+## Product-Market Fit: The Sean Ellis Test for AI
+
+Ask users: "How would you feel if you could no longer use [AI feature]?"
+
+**The twist for AI:** Users often overvalue AI features in surveys because they sound impressive. Complement the Sean Ellis test with **behavioral data** — are users actually using the AI features repeatedly, or just trying them once?
+
+## Key Takeaways
+
+1. **Don't reinvent frameworks** — adapt proven ones with AI-specific lenses
+2. **Evaluation is your superpower** — it's the AI equivalent of analytics
+3. **Measure behavior, not sentiment** — users say they want AI; watch if they use it
+4. **Cost is a first-class product concern** — unlike traditional software, AI features have meaningful marginal costs

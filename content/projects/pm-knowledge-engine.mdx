@@ -1,0 +1,35 @@
+---
+title: "PM Knowledge Engine"
+date: "2024-08-01"
+summary: "Framework extraction system that processes podcast transcripts and articles to build a structured product management knowledge base."
+tags: ["NLP", "Knowledge Graph", "Product"]
+---
+
+## Problem
+
+Product management knowledge is scattered across podcasts, blogs, books, and tribal knowledge. PMs spend hours consuming content but struggle to systematically apply frameworks when they need them.
+
+## Solution
+
+Built a knowledge extraction system that processes PM content (podcast transcripts, articles, books) and organizes it into a structured, searchable framework database.
+
+## How It Works
+
+1. **Ingest** — Process podcast transcripts and articles through an LLM pipeline
+2. **Extract** — Identify frameworks, mental models, and actionable patterns
+3. **Classify** — Categorize by topic (strategy, prioritization, growth, leadership)
+4. **Structure** — Create consistent framework cards with: name, source, when to use, steps, examples
+5. **Serve** — Searchable interface with context-aware recommendations
+
+## Key Frameworks Extracted
+
+- Prioritization: LNO, ICE, RICE, Opportunity Cost models
+- Strategy: DHM Model, JAM Model, Horizons Framework
+- Product-Market Fit: Sean Ellis Test, PMF Engine
+- Growth: Product-Led Sales, Network Effects, Viral Loops
+
+## Learnings
+
+1. **LLMs are great at extraction** — with good prompts, they can identify frameworks in unstructured content with high accuracy
+2. **Deduplication is the hard part** — the same framework gets described differently by different sources
+3. **Context matters more than content** — knowing *when* to use a framework is more valuable than knowing *what* it is
