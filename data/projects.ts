@@ -10,8 +10,8 @@ export const projects: Project[] = [
   {
     slug: "zoom-chatbot-assistant",
     title: "Zoom Chatbot Assistant",
-    description: "AI-powered Team Chat bot that integrates with Zoom's platform to provide intelligent responses and automate workflows.",
-    tags: ["Chatbot", "Zoom API", "AI Agent"],
+    description: "AI-powered Team Chat bot built with Zoom's Rivet SDK and OpenAI — featuring streaming responses, interactive feedback, and slash commands. Built as part of driving Zoom's Chat AI platform.",
+    tags: ["Zoom Rivet SDK", "OpenAI", "AI Agent", "Streaming"],
     status: "live",
   },
   {

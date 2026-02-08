@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Ankit Govil | AI Product Leader",
-  description: "Senior Product Manager at Microsoft leading conversational AI and app experiences for Teams. 15 years taking platform and AI products from zero to scale.",
+  description: "Product leader driving Chat AI & Agent Platform at Zoom. Previously built the Teams AI SDK at Microsoft. 15 years taking platform and AI products from zero to scale.",
 };
 
 export default function RootLayout({

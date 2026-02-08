@@ -16,16 +16,16 @@ export default function Hero() {
             <span className="gradient-text">Ankit Govil</span>
           </h1>
           <p className="text-xl sm:text-2xl font-medium text-foreground mb-6">
-            I build AI platforms from zero to scale.
+            I build AI and agent platforms from zero to scale.
           </p>
           <p className="text-lg text-muted max-w-2xl mb-4">
-            At Microsoft, I own the <span className="text-foreground">Teams AI extensibility platform</span> &mdash;
-            the SDK, developer experience, and partner ecosystem that powers every Copilot agent across Microsoft 365.
+            At <span className="text-foreground">Zoom</span>, I drive the Chat AI & Agent Platform &mdash;
+            rethinking how 1P, 2P, and 3P agents are built, distributed, and experienced across the ecosystem.
           </p>
           <p className="text-lg text-muted max-w-2xl mb-10">
-            I drive cross-BU strategy with Azure AI and Graph, lead 20+ person cross-functional teams, and have
-            shipped products featured in <span className="text-foreground">Satya Nadella&apos;s keynotes</span>.
-            Previously: 0-to-1 SaaS at startups, founding engineer.
+            Previously at <span className="text-foreground">Microsoft</span>, I created and shipped the
+            Teams AI SDK, onboarded 10K+ developers, and delivered products featured
+            in Satya Nadella&apos;s keynotes. 15 years across Zoom, Microsoft, startups, and founding my own company.
           </p>
 
           {/* Key stats */}
@@ -43,8 +43,8 @@ export default function Hero() {
               <div className="text-xs text-muted mt-0.5">Incremental MAU</div>
             </div>
             <div>
-              <div className="text-2xl font-bold gradient-text">&lt;12mo</div>
-              <div className="text-xs text-muted mt-0.5">0 to GA</div>
+              <div className="text-2xl font-bold gradient-text">15yr</div>
+              <div className="text-xs text-muted mt-0.5">Product & Engineering</div>
             </div>
           </div>
 

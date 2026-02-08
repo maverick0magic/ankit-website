@@ -10,14 +10,30 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "Zoom",
+    location: "Seattle, WA",
+    roles: [
+      {
+        title: "Senior Product Manager, Chat AI & Agent Platform",
+        period: "July 2025 – Present",
+        highlights: [
+          "Driving the AI and agent platform strategy for Zoom Team Chat — rethinking how 1P, 2P, and 3P agents are built, distributed, and experienced across the Zoom ecosystem.",
+          "Redefining the developer platform for Zoom Chat agents, re-engaging the developer community with a modern agent-first extensibility model and streamlined integration patterns.",
+          "Leading the convergence of conversational AI and chat platform capabilities — designing the architecture for agentic UX, tool use, and multi-turn interactions natively within Zoom Team Chat.",
+          "Driving cross-functional alignment across Zoom's AI, platform, and chat product teams to ship an integrated agent experience that spans 1P AI features, partner-built agents, and custom enterprise workflows.",
+        ],
+      },
+    ],
+  },
+  {
     company: "Microsoft",
     location: "Seattle, WA",
     roles: [
       {
         title: "Senior Product Manager, Teams AI Platform",
-        period: "May 2022 – Present",
+        period: "May 2022 – June 2025",
         highlights: [
-          "Own end-to-end product strategy for Teams AI extensibility — the platform layer that enables every Copilot, AI bot, and agentic experience across Microsoft 365 — influencing cross-BU roadmaps with Azure AI, Microsoft Graph, and the Copilot Studio org.",
+          "Owned end-to-end product strategy for Teams AI extensibility — the platform layer that enables every Copilot, AI bot, and agentic experience across Microsoft 365 — influencing cross-BU roadmaps with Azure AI, Microsoft Graph, and the Copilot Studio org.",
           "Created and shipped the Teams AI Library (v1 & v2), the foundational SDK for building Copilot agents in JS, C#, and Python — driving adoption from 0 to 10K+ developers and 150+ production partners in under 12 months.",
           "Defined the GTM strategy for third-party AI agents on Teams, unlocking millions of net-new monthly active users and establishing Teams as the primary distribution surface for Copilot partner ecosystem.",
           "Integrated Azure OpenAI capabilities — RAG, persistent memory, compliance controls, and multi-agent orchestration — into the Teams platform, directly shaping how Microsoft delivers agentic AI at enterprise scale.",
@@ -83,7 +99,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "Technical",
-    skills: ["JavaScript / TypeScript", "C# / Python", "API & Platform Design", "Distributed Systems", "Mobile Platforms (iOS/Android)", "Azure / Cloud Architecture"],
+    skills: ["JavaScript / TypeScript", "C# / Python", "API & Platform Design", "Distributed Systems", "Mobile Platforms (iOS/Android)", "Cloud Architecture"],
   },
   {
     category: "Leadership",
@@ -102,4 +118,4 @@ export const education = [
 ];
 
 export const highlight =
-  "Product leader who builds AI platforms from zero to scale. At Microsoft, I own the Teams AI extensibility platform — the SDK, developer experience, and partner ecosystem that powers every Copilot agent across M365. I drive cross-BU strategy with Azure AI and Graph, lead 20+ person teams, and have shipped products featured in Satya Nadella's keynotes. Previously: 0-to-1 SaaS at startups, founding engineer. BITS Pilani CS + Economics.";
+  "Product leader who builds AI and agent platforms from zero to scale. At Zoom, I drive the Chat AI & Agent Platform — rethinking how 1P, 2P, and 3P agents are built and experienced across the ecosystem. Previously at Microsoft, I created and shipped the Teams AI SDK, onboarded 10K+ developers, and delivered products featured in Satya Nadella's keynotes. 15 years across FAANG, startups, and founding my own company. BITS Pilani CS + Economics.";
