@@ -8,7 +8,8 @@ import { useTheme } from "./ThemeProvider";
 const navLinks = [
   { href: "/projects", label: "Projects" },
   { href: "/thoughts", label: "Ideas" },
-  { href: "/resume", label: "Resume" },
+  { href: "/resume", label: "My Story" },
+  { href: "/reads", label: "Fav Reads" },
 ];
 
 export default function Navigation() {

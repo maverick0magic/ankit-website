@@ -1,13 +1,13 @@
 import { experiences, skillCategories, education, highlight, flagshipWins, proofPoints } from "@/data/resume";
 
-export const metadata = { title: "Resume | Ankit Govil" };
+export const metadata = { title: "My Story | Ankit Govil" };
 
 export default function ResumePage() {
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-1">Ankit Govil</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-1">My Story</h1>
           <p className="text-muted text-sm">Seattle, WA</p>
         </div>
         <a

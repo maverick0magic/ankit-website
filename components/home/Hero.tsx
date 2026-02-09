@@ -58,7 +58,7 @@ export default function Hero() {
               href="/resume"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-card-border text-foreground font-medium transition-all hover:bg-card-bg hover:scale-105"
             >
-              Resume
+              My Story
             </Link>
           </div>
         </div>
