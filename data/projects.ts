@@ -17,10 +17,10 @@ export const projects: Project[] = [
     kind: "work",
   },
   {
-    slug: "zoom-chatbot-assistant",
-    title: "Zoom Chatbot Assistant",
-    description: "AI-powered Team Chat bot built with Zoom's Rivet SDK and OpenAI — featuring streaming responses, interactive feedback, and slash commands. Built as part of driving Zoom's Chat AI platform.",
-    tags: ["Zoom Rivet SDK", "OpenAI", "AI Agent", "Streaming"],
+    slug: "agent-team",
+    title: "Agent Team",
+    description: "Claude Code plugin that turns one AI session into a 7-agent team — orchestrator protocol, sprint workflows, Codex code reviews, and inter-agent handoffs. Battle-tested across multiple production projects.",
+    tags: ["Claude Code", "Multi-Agent", "Developer Tools", "Open Source"],
     status: "live",
   },
   {

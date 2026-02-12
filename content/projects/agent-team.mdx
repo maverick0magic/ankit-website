@@ -1,0 +1,48 @@
+---
+title: "Agent Team"
+date: "2026-02-12"
+summary: "A Claude Code plugin that gives you a 7-agent team for building software products. Structured sprints, code reviews, and inter-agent handoffs — all from one CLI session."
+tags: ["Claude Code", "Multi-Agent", "Developer Tools", "Open Source"]
+---
+
+## Problem
+
+AI coding assistants are powerful but monolithic — one session tries to do everything: design, implement, review, deploy, write content. That works for small tasks, but on real projects you end up context-switching constantly and dropping quality.
+
+## Solution
+
+Agent Team turns Claude Code into a **team of specialized agents** that work together through structured sprints, code reviews, and inter-agent handoffs. Instead of one AI doing everything, you get focused agents that each own a domain.
+
+```
+Orchestrator (you + Claude Code)
+  ├── Design Agent ────────── UI/UX, design system, visual QA
+  ├── Coding Agent ────────── implementation, all code
+  │       ↓
+  ├── Codex Agent ─────────── code review (8-point checklist)
+  │       ↓
+  ├── Deploy Agent ────────── CI/CD, infra, releases
+  ├── Content Agent ───────── copy, content files, data
+  ├── Growth Agent ────────── strategy, ASO, launch
+  └── QA Agent ────────────── test plans, testing, a11y
+```
+
+## How It Works
+
+Run `/agent-team:kickoff` in any project. The plugin scans your codebase, detects the stack, and proposes a team. Personal projects get 2-4 agents (lean and fast), work projects get 5-7 (with mandatory code review).
+
+From there, sprints follow a repeating cycle: **Plan → Dispatch → Review → Report**. Agents are spawned in parallel and communicate through structured handoff documents.
+
+## Key Features
+
+- **7 specialized agents** — Design, Coding, Codex (review), Deploy, Content, Growth, QA
+- **Orchestrator protocol** — 4-phase sprint cycle with parallel agent dispatch
+- **Codex 8-point review** — stack-specific code review checklist generated at kickoff
+- **Agent handoffs** — structured documents for cross-agent communication
+- **Personal vs Work modes** — lean teams for side projects, full teams for production
+
+## Learnings
+
+1. **Specialization beats generalization** — agents with narrow scope produce better output than one agent doing everything
+2. **Structure enables autonomy** — the sprint protocol and handoff docs let agents work independently without constant orchestrator intervention
+3. **Code review is the quality gate** — the Codex agent catches issues that would otherwise compound across sprints
+4. **Team composition matters** — not every project needs every agent; over-hiring slows things down
