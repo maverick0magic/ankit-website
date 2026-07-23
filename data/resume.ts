@@ -54,13 +54,14 @@ export const experiences: Experience[] = [
     location: "Seattle, WA",
     roles: [
       {
-        title: "Senior Product Manager, Chat AI & Agent Platform",
+        title: "Product Lead, Agent Platform",
         period: "July 2025 – Present",
         highlights: [
-          "Driving the AI and agent platform strategy for Zoom Team Chat — rethinking how 1P, 2P, and 3P agents are built, distributed, and experienced across the Zoom ecosystem.",
+          "Lead a 40-engineer organization building the app and agent extensibility platform for Zoom Workplace — rethinking how 1P, 2P, and 3P agents are built, distributed, and experienced across the Zoom ecosystem.",
           "Chose to rebuild the developer platform around an agent-first extensibility model rather than patching the legacy bot framework — re-engaging the developer community with modern integration patterns.",
-          "Leading the convergence of conversational AI and chat platform capabilities — designing the architecture for agentic UX, tool use, and multi-turn interactions natively within Zoom Team Chat.",
-          "Driving cross-functional alignment across Zoom's AI, platform, and chat product teams to ship an integrated agent experience that spans 1P AI features, partner-built agents, and custom enterprise workflows.",
+          "Personally built and shipped an autonomous PM Report & Analytics agent, onboarding 10 PMs and saving each 10+ hours of manual reporting — a hands-on proof point for the platform's own developer experience.",
+          "Own the built-in Zoom Workplace agent and drive cross-functional alignment across Zoom's AI, platform, and chat teams to ship an integrated agent experience spanning 1P AI features, partner-built agents, and custom enterprise workflows.",
+          "Grew agent platform adoption 20% week-over-week since launch.",
         ],
       },
     ],
@@ -71,7 +72,7 @@ export const experiences: Experience[] = [
     roles: [
       {
         title: "Senior Product Manager, Teams AI Platform",
-        period: "May 2022 – June 2025",
+        period: "May 2022 – July 2025",
         highlights: [
           "Owned end-to-end product strategy for Teams AI extensibility — the platform layer that enables every Copilot, AI bot, and agentic experience across Microsoft 365 — influencing cross-BU roadmaps with Azure AI, Microsoft Graph, and the Copilot Studio org.",
           "Bet on an opinionated SDK with CLI scaffolding over a flexible-but-complex framework → reduced time-to-first-agent from days to 30 min → won 10K+ developers and 150+ production partners over competing ecosystems in under 12 months.",
@@ -105,11 +106,17 @@ export const experiences: Experience[] = [
     location: "",
     roles: [
       {
-        title: "Product Manager — Belong | Ezetap (Bengaluru)",
-        period: "2014 – 2018",
+        title: "Product Manager (0-to-1) — Belong.co (Bengaluru)",
+        period: "May 2015 – May 2018",
         highlights: [
-          "Built and launched an AI-driven talent matching SaaS platform from scratch, securing $0.6M ARR from enterprise clients (Ola, Amazon, Uber) and validating algorithmic matchmaking for passive candidates at scale.",
-          "Led ARPU expansion at Ezetap through SMB discovery and new service rollouts in tier 2/3 cities, delivering 2x ARPU growth within one release cycle.",
+          "Built and launched an HRMS/Applicant Tracking SaaS platform with algorithmic matchmaking for passive candidates, securing $0.6M ARR from enterprise clients including Ola, Amazon, and Uber.",
+        ],
+      },
+      {
+        title: "Product Manager — Ezetap (Bengaluru)",
+        period: "September 2014 – May 2015",
+        highlights: [
+          "Led SMB discovery and rolled out new revenue lines (mobile recharges, ticket bookings) in tier 2/3 cities, driving a 2x ARPU increase within one release cycle.",
         ],
       },
       {
@@ -143,7 +150,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "Leadership",
-    skills: ["20+ Person Cross-functional Teams", "Executive Stakeholder Alignment", "Cross-BU Strategy & Roadmaps", "Developer Advocacy at Scale", "Keynote-level Storytelling", "Startup to Enterprise Range"],
+    skills: ["40+ Engineer Org Leadership", "Executive Stakeholder Alignment", "Cross-BU Strategy & Roadmaps", "Developer Advocacy at Scale", "Keynote-level Storytelling", "Startup to Enterprise Range"],
   },
 ];
 
@@ -158,4 +165,4 @@ export const education = [
 ];
 
 export const highlight =
-  "Product leader who builds AI and agent platforms from zero to scale. At Zoom, I drive the Chat AI & Agent Platform — rethinking how 1P, 2P, and 3P agents are built and experienced across the ecosystem. Previously at Microsoft, I created and shipped the Teams AI SDK, onboarded 10K+ developers, and delivered products featured in Satya Nadella's keynotes. 15 years across FAANG, startups, and founding my own company. BITS Pilani CS + Economics.";
+  "Product leader who builds AI and agent platforms from zero to scale. At Zoom, I lead a 40-engineer organization building the Agent Platform — rethinking how 1P, 2P, and 3P agents are built and experienced across the ecosystem. Previously at Microsoft, I created and shipped the Teams AI SDK, onboarded 10K+ developers, and delivered products featured in Satya Nadella's keynotes. 15 years across FAANG, startups, and founding my own company. BITS Pilani CS + Economics.";
